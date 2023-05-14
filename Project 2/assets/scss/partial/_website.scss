@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    &:focus {
+        outline: 0;
+    }
+}
+
+body {
+    background-color: #f5f6f8;
+
+    .main-all-contents {
+        background-color: #fff;
+        border-radius: 6px;
+        margin-bottom: 16px;
+        padding: 15px;
+    
+        .widget-btn {
+            height: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #006699;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .more-btn {
+            color: #aaa;
+            font-size: 16px;
+            align-self: start;
+            cursor: pointer;
+    
+            &:hover {
+                color: #006699;
+            }
+        }
+    }
+
+    .create-post {
+        ul {
+            li {
+                label, a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    color: #17272f;
+                    font-size: 14px;
+                    padding: 7px 0;
+                    border-radius: 4px;
+                    &:hover {
+                        background: #f7f7f7;
+                    }
+
+                    i {
+                        margin-right: 8px;
+                        font-size: 16px;
+                        &.icon-camera {
+                            color: #31b057;
+                        }
+                        &.icon-video {
+                            color: #388bf2;
+                        }
+                        &.icon-calendar {
+                            color: #fc8338;
+                        }
+                        &.icon-edit {
+                            color: #e52a34;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+}
+
+
+// .sidebar {
+
+//     h6 {
+//         color: $secondary-color;
+//         font-size: 14px;
+//         font-weight: 500;
+//         padding-bottom: 8px;
+//         margin-bottom: 8px;
+//         border-bottom: 1px solid #edf0f5;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+    
+//         .descryption {
+//             display: block;
+//             font-size: 10px;
+//             color: #aaa;
+//             font-weight: normal;
+//             padding-top: 4px;
+//         }
+//     }
+    
+// }
+
+// .sidebar {
+
+//     &.main-all-contents {
+
+//         .widget-btn {
+//             height: 50px;
+//             text-decoration: none;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             color: $primary-color;
+//             font-size: 14px;
+//             font-weight: 500;
+//         }
+
+//     } 
+// }
+

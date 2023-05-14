@@ -1,0 +1,151 @@
+header {
+    // position: sticky;
+    // top: 0;
+    background-color: #fff;
+    // z-index: 10;
+    .container {
+        .navbar-linkedin {
+            height: 56px;
+            display: flex;
+            align-items: center;
+
+            form {
+                position: relative;
+                margin-left: 18px;
+
+                i {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    color: #aaa;
+                    width: 44px;
+                    height: 32px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .search {
+                    width: 100%;
+                    height: 32px;
+                    background-color: rgba(#dedede, .32);
+                    border-radius: 4px;
+                    font-size: 14px;
+                    padding: 0 15px 0 44px;
+                    &::placeholder {
+                        color: #aaa;
+                    }
+                }
+            }
+
+            .nav-menu {
+                margin: 0 auto;
+                padding: 0;
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+
+                    li {
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #aaa;
+                            margin: 0 13px;
+                            transition: .2s ease;
+
+                            i {
+                                font-size: 20px;
+                            }
+
+                            span {
+                                display: none;
+                            }
+                        }
+
+                        &:hover {
+                           a {
+                            color: $primary-color;
+                           }
+                        }
+
+                        &.active {
+                            a {
+                                color: $primary-color;
+                                text-decoration: none;
+                                i {
+                                    margin-right: 5px;
+                                }
+
+                                span {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .user-menu {
+                margin-left: auto;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+
+                    .user-detail {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: right;
+                        margin-right: 6px;
+
+                        .name {
+                            color: #17272f;
+                            font-size: 14px;
+                        }
+
+                        .status {
+                            font-size: 12px;
+                            &.online {
+                                color: #31b057;
+                            }
+                            &.offline {
+                                color: #b03131;
+                            }
+                        }
+                    }
+
+                    img {
+                        width: 30px;
+                        min-width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    i {
+                        color: #a7b4cc;
+                        font-size: 10px;
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.header-fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 5px 30px rgba(0, 22, 84, .1);
+        -webkit-box-shadow: 0 5px 30px rgba(0, 22, 84, .1);
+        z-index: 999;
+        transition: .2s ease-in;
+        animation-name: slideInDown;
+        animation-duration: .5s;
+    }
+}
