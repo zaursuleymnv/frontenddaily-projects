@@ -1,0 +1,498 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+@font-face {
+  font-family: "Louis George Cafe";
+  src: url("../font/LouisGeorgeCafe-Bold.eot");
+  src: url("../font/LouisGeorgeCafe-Bold.eot?#iefix") format("embedded-opentype"), url("../font/LouisGeorgeCafe-Bold.woff2") format("woff2"), url("../font/LouisGeorgeCafe-Bold.woff") format("woff"), url("../font/LouisGeorgeCafe-Bold.ttf") format("truetype"), url("../font/LouisGeorgeCafe-Bold.svg#LouisGeorgeCafe-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Louis George Cafe";
+  src: url("../font/LouisGeorgeCafe.eot");
+  src: url("../font/LouisGeorgeCafe.eot?#iefix") format("embedded-opentype"), url("../font/LouisGeorgeCafe.woff2") format("woff2"), url("../font/LouisGeorgeCafe.woff") format("woff"), url("../font/LouisGeorgeCafe.ttf") format("truetype"), url("../font/LouisGeorgeCafe.svg#LouisGeorgeCafe") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Louis George Cafe";
+  src: url("../font/LouisGeorgeCafeLight.eot");
+  src: url("../font/LouisGeorgeCafeLight.eot?#iefix") format("embedded-opentype"), url("../font/LouisGeorgeCafeLight.woff2") format("woff2"), url("../font/LouisGeorgeCafeLight.woff") format("woff"), url("../font/LouisGeorgeCafeLight.ttf") format("truetype"), url("../font/LouisGeorgeCafeLight.svg#LouisGeorgeCafeLight") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url("../icon-font/iconfont.eot?71890918");
+  src: url("../icon-font/iconfont.eot?71890918#iefix") format("embedded-opentype"), url("../icon-font/iconfont.woff2?71890918") format("woff2"), url("../icon-font/iconfont.woff?71890918") format("woff"), url("../icon-font/iconfont.ttf?71890918") format("truetype"), url("../icon-font/iconfont.svg?71890918#iconfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.svg?71890918#iconfont') format('svg');
+  }
+}
+*/
+[class^=icon-]:before, [class*=" icon-"]:before {
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-arrow-right:before {
+  content: "\e801";
+} /* '' */
+.icon-atm:before {
+  content: "\e802";
+} /* '' */
+.icon-back:before {
+  content: "\e803";
+} /* '' */
+.icon-bank:before {
+  content: "\e804";
+} /* '' */
+.icon-block:before {
+  content: "\e805";
+} /* '' */
+.icon-card:before {
+  content: "\e806";
+} /* '' */
+.icon-chart:before {
+  content: "\e807";
+} /* '' */
+.icon-download:before {
+  content: "\e808";
+} /* '' */
+.icon-filter:before {
+  content: "\e809";
+} /* '' */
+.icon-loan:before {
+  content: "\e80b";
+} /* '' */
+.icon-pig:before {
+  content: "\e80c";
+} /* '' */
+.icon-pincode:before {
+  content: "\e80d";
+} /* '' */
+.icon-request:before {
+  content: "\e80f";
+} /* '' */
+.icon-send:before {
+  content: "\e811";
+} /* '' */
+.icon-plus:before {
+  content: "\e813";
+} /* '' */
+.icon-search:before {
+  content: "\e814";
+} /* '' */
+.icon-home:before {
+  content: "\e815";
+} /* '' */
+.icon-3dots:before {
+  content: "\e816";
+} /* '' */
+.icon-settings:before {
+  content: "\e817";
+} /* '' */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Louis George Cafe";
+  -webkit-overflow-scrolling: touch;
+}
+*:focus {
+  outline: 0;
+}
+
+h6 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: normal;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page {
+  padding: 24px;
+}
+
+.app-wrapper {
+  height: 100%;
+}
+.app-wrapper .page .back {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.app-wrapper .page .back .back-btn {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.app-wrapper .page .back .back-btn i {
+  font-size: 19px;
+  margin-right: 15px;
+}
+.app-wrapper .page .back .more-btn {
+  color: #fff;
+  font-size: 25px;
+}
+.app-wrapper .page .cards-wrapper .swiper {
+  margin: 0 -24px 49px;
+  padding-bottom: 45px;
+}
+.app-wrapper .page .cards-wrapper .swiper .swiper-wrapper .swiper-slide {
+  width: 331px;
+  display: flex;
+  justify-content: flex-end;
+}
+.app-wrapper .page .cards-wrapper .swiper .swiper-wrapper .swiper-slide:last-child {
+  width: 361px;
+  padding-right: 24px;
+}
+.app-wrapper .page .cards-wrapper .swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #fff;
+  opacity: 1;
+}
+.app-wrapper .page .cards-wrapper .swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #fff;
+}
+.app-wrapper .page .cards-wrapper .card-inner {
+  min-width: 307px;
+  height: 172px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 22px 21px 16px 27px;
+  margin: 0 15px;
+}
+.app-wrapper .page .cards-wrapper .card-inner.bg-dark {
+  background: linear-gradient(to right, #141414, #292929);
+  box-shadow: 0 6px 12px 0 rgba(20, 20, 20, 0.3);
+}
+.app-wrapper .page .cards-wrapper .card-inner.bg-blue {
+  background: linear-gradient(to right, #6289ff, #5252ff);
+  box-shadow: 0 6px 12px 0 rgba(21, 122, 255, 0.3);
+}
+.app-wrapper .page .cards-wrapper .card-inner.bg-yellow {
+  background: linear-gradient(90deg, rgb(255, 231, 0) 0%, rgb(255, 198, 11) 35%);
+  box-shadow: 0 6px 12px 0 rgba(255, 198, 11, 0.3);
+}
+.app-wrapper .page .cards-wrapper .card-inner .bank-name {
+  font-size: 16px;
+  color: #fff;
+}
+.app-wrapper .page .cards-wrapper .card-inner img {
+  align-self: baseline;
+}
+.app-wrapper .page .cards-wrapper .card-inner .card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app-wrapper .page .cards-wrapper .card-inner .card-content .card-number {
+  font-size: 15px;
+}
+.app-wrapper .page .cards-wrapper .card-inner .card-content .card-number span {
+  color: #fff;
+}
+.app-wrapper .page .users {
+  margin: 0 -24px 45px;
+}
+.app-wrapper .page .users ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.app-wrapper .page .users ul li {
+  margin-right: 15px;
+  scroll-snap-align: start;
+}
+.app-wrapper .page .users ul li:first-child {
+  padding-left: 24px;
+}
+.app-wrapper .page .users ul li:last-child {
+  padding-right: 24px;
+}
+.app-wrapper .page .users ul li a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+}
+.app-wrapper .page .users ul li a .icon {
+  width: 60px;
+  height: 60px;
+  background-color: #157aff;
+  display: grid;
+  place-items: center;
+  border-radius: 24px;
+  color: #fff;
+  box-shadow: 0 6px 12px 0 rgba(21, 122, 255, 0.3);
+}
+.app-wrapper .page .users ul li a img {
+  min-width: 60px;
+  height: 60px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.17);
+}
+.app-wrapper .page .users ul li a .name {
+  margin-top: 17px;
+  font-size: 14px;
+  color: #fff;
+}
+.app-wrapper .page .setting-menu {
+  border-top: 1px solid rgba(226, 233, 255, 0.1);
+}
+.app-wrapper .page .setting-menu ul {
+  padding: 0;
+  margin: 0;
+}
+.app-wrapper .page .setting-menu ul li {
+  border-bottom: 1px solid rgba(226, 233, 255, 0.1);
+}
+.app-wrapper .page .setting-menu ul li:last-child {
+  border-bottom: 0;
+}
+.app-wrapper .page .setting-menu ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 22px 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.app-wrapper .page .setting-menu ul li a i:first-child {
+  width: 30px;
+  color: #157aff;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 16px;
+}
+.app-wrapper .page .setting-menu ul li a .icon-arrow-right {
+  margin-left: auto;
+  font-size: 12px;
+  padding-right: 15px;
+}
+.app-wrapper .page .setting-menu ul li a i.icon-pincode {
+  font-size: 12px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #1a212a;
+}
+
+.app-wrapper {
+  height: 100%;
+}
+.app-wrapper .app-inner {
+  height: calc(100% - 60px);
+  overflow: auto;
+}
+.app-wrapper .app-inner header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 24px;
+}
+.app-wrapper .app-inner header .balance .text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+.app-wrapper .app-inner header .balance .money {
+  color: #fff;
+  font-size: 38px;
+}
+.app-wrapper .app-inner header .avatar img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #157aff;
+  box-shadow: 0 6px 12px 0 rgba(21, 122, 255, 0.5);
+}
+.app-wrapper .app-inner main .actions {
+  overflow-x: auto;
+  scroll-snap-type: mandatory;
+  margin-bottom: 30px;
+}
+.app-wrapper .app-inner main .actions ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.app-wrapper .app-inner main .actions ul li {
+  padding: 0 15px;
+  scroll-snap-align: start;
+}
+.app-wrapper .app-inner main .actions ul li:first-child {
+  padding-left: 24px;
+}
+.app-wrapper .app-inner main .actions ul li:last-child {
+  padding-right: 24px;
+}
+.app-wrapper .app-inner main .actions ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+}
+.app-wrapper .app-inner main .actions ul li a .icon {
+  min-width: 60px;
+  height: 60px;
+  background: rgba(83, 95, 109, 0.19);
+  border-radius: 24px;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+}
+.app-wrapper .app-inner main .actions ul li a .text {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 13px;
+}
+.app-wrapper .app-inner main .transactions {
+  background-color: #1b242e;
+  border-radius: 48px 48px 0 0;
+  padding: 14px 24px;
+}
+.app-wrapper .app-inner main .transactions h6 .search-filter-actions {
+  display: flex;
+}
+.app-wrapper .app-inner main .transactions h6 .search-filter-actions a {
+  min-width: 52px;
+  height: 52px;
+  background: rgba(83, 95, 109, 0.19);
+  border-radius: 15px;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  margin-left: 18px;
+}
+.app-wrapper .app-inner main .transactions .payment-actions {
+  padding: 0;
+}
+.app-wrapper .app-inner main .transactions .payment-actions li {
+  margin-bottom: 17px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(226, 233, 255, 0.1);
+}
+.app-wrapper .app-inner main .transactions .payment-actions li:last-child {
+  border: 0;
+}
+.app-wrapper .app-inner main .transactions .payment-actions li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.app-wrapper .app-inner main .transactions .payment-actions li a .icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+.app-wrapper .app-inner main .transactions .payment-actions li a .icon.bg-white {
+  background-color: #fff;
+}
+.app-wrapper .app-inner main .transactions .payment-actions li a .icon i {
+  color: #157aff;
+  font-size: 24px;
+}
+.app-wrapper .app-inner main .transactions .payment-actions li a .icon img {
+  max-width: 45px;
+  max-height: 45px;
+  object-fit: cover;
+}
+.app-wrapper .app-inner main .transactions .payment-actions li a .payment-for {
+  display: flex;
+  flex-direction: column;
+}
+.app-wrapper .app-inner main .transactions .payment-actions li a .payment-for .title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+.app-wrapper .app-inner main .transactions .payment-actions li a .payment-for .date {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 8px;
+}
+.app-wrapper .app-inner main .transactions .payment-actions li a .money {
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.app-wrapper footer {
+  background-color: #1a212a;
+}
+.app-wrapper footer .menu {
+  height: 60px;
+}
+.app-wrapper footer .menu ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.app-wrapper footer .menu ul li {
+  flex: 1;
+}
+.app-wrapper footer .menu ul li a {
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 21px;
+  color: rgba(255, 255, 255, 0.5);
+  height: 60px;
+}
+.app-wrapper footer .menu ul li.active a {
+  color: #157aff;
+}/*# sourceMappingURL=style.css.map */

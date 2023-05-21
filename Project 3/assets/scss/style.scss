@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+@import 'partial/font';
+@import 'partial/icon-font';
+@import 'partial/mixin';
+@import 'partial/web';
+@import 'partial/variables';
+@import 'components/alt';
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #1a212a;
+}
+
+.app-wrapper {
+    height: 100%;
+
+    .app-inner {
+        height: calc(100% - 60px);
+        overflow: auto;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 27px 24px;
+    
+            .balance {
+                .text {
+                    color: rgba(#fff, .5);
+                    font-size: 14px;
+                }
+                .money {
+                    color: #fff;
+                    font-size: 38px;
+                }
+            }
+    
+            .avatar {
+                img {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    border: 2px solid $primary-color;
+                    box-shadow: 0 6px 12px 0 rgba($primary-color, .5);
+                }
+            }
+        }
+    
+        main {
+            .actions {
+                overflow-x: auto;
+                scroll-snap-type: mandatory;
+                margin-bottom: 30px;
+                
+                ul {
+                    display: flex;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        padding: 0 15px;
+                        scroll-snap-align: start;
+        
+                        &:first-child {
+                            padding-left: 24px;
+                        }
+                        &:last-child {
+                            padding-right: 24px;
+                        }
+        
+                        a {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            text-decoration: none;
+        
+                            .icon {
+                                min-width: 60px;
+                                height: 60px;
+                                background: rgba(#535f6d, .19);
+                                border-radius: 24px;
+                                color: #fff;
+                                @include center;
+                                font-size: 24px;
+                            }
+        
+                            .text {
+                                font-size: 14px;
+                                color: #fff;
+                                margin-top: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .transactions {
+                background-color: #1b242e;
+                border-radius: 48px 48px 0 0;
+                padding: 14px 24px;
+        
+                h6 {
+                    .search-filter-actions {
+                        display: flex;
+                        a {
+                            min-width: 52px;
+                            height: 52px;
+                            background: rgba(#535f6d, .19);
+                            border-radius: 15px;
+                            color: #fff;
+                            @include center;
+                            font-size: 16px;
+                            margin-left: 18px;
+                        }
+                    }
+                }
+        
+                .payment-actions {
+                    padding: 0;
+        
+                    li {
+                        margin-bottom: 17px;
+                        padding-bottom: 17px;
+                        border-bottom: 1px solid rgba(#e2e9ff, .1);
+        
+                        &:last-child {
+                            border: 0;
+                        }
+        
+                        a {
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+        
+                            .icon {
+                                width: 45px;
+                                height: 45px;
+                                @include center;
+                                border-radius: 16px;
+                                overflow: hidden;
+                                margin-right: 20px;
+        
+                                &.bg-white {
+                                    background-color: #fff;
+                                }
+        
+                                i {
+                                    color: $primary-color;
+                                    font-size: 24px;
+                                }
+        
+                                img {
+                                    max-width: 45px;
+                                    max-height: 45px;
+                                    object-fit: cover;
+                                }
+                            }
+            
+                            .payment-for {
+                                display: flex;
+                                flex-direction: column;
+        
+                                .title {
+                                    color: #fff;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                }
+            
+                                .date {
+                                    font-size: 14px;
+                                    color: rgba(#fff, .5);
+                                    padding-top: 8px;
+                                }
+                            }
+            
+                            .money {
+                                margin-left: auto;
+                                font-size: 18px;
+                                font-weight: bold;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: #1a212a;
+        .menu {
+            height: 60px;
+            ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    flex: 1;
+                    a {
+                        @include center;
+                        color: #fff;
+                        font-size: 21px;
+                        color: rgba(#fff, .5);
+                        height: 60px;
+                    }
+
+                    &.active a {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
