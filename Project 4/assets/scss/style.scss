@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import 'partial/font';
+@import 'partial/icon-font';
+@import 'partial/mixin';
+@import 'partial/web';
+@import 'partial/variables';
+@import 'components/alt';
+
+.component {
+    background-color: #1b1b30;
+    border-radius: 10px;
+
+    &--help {
+        padding: 40px 50px;
+        margin-bottom: 25px;
+
+        h5 {
+            color: #bbbbd7;
+            font-size: 36px;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        form {
+            width: 100%;
+            input {
+                width: 100%;
+                height: 72px;
+                background: #2A2A42 url("data:image/svg+xml,%3Csvg width='28px' height='28px' viewBox='0 0 28 28' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3EGroup%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.5'%3E%3Cg id='Day-1181-Support-Page-UI-COmponents-Design' transform='translate(-383.000000, -327.000000)'%3E%3Cg id='Group-7' transform='translate(228.000000, 195.000000)'%3E%3Cg id='Group-6' transform='translate(77.000000, 0.000000)'%3E%3Cg id='Group' transform='translate(75.000000, 129.000000)'%3E%3Cpolygon id='Path' points='0 0 34 0 34 34 0 34'%3E%3C/polygon%3E%3Ccircle id='Oval' stroke='%23FFFFFF' stroke-width='2.125' stroke-linecap='round' stroke-linejoin='round' cx='14.1666667' cy='14.1666667' r='9.91666667'%3E%3C/circle%3E%3Cpath d='M29.75,29.75 L21.25,21.25' id='Path' stroke='%23FFFFFF' stroke-width='2.125' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat 25px;
+                padding: 0 40px 0 75px;
+                font-size: 18px;
+                border: 1px solid #454564;
+                border-radius: 5px;
+                color: #fff;
+                transition: 200ms border-color ease;
+
+                &::placeholder {
+                    color: rgba( #ffff, .6);
+                }
+
+                &:focus {
+                    border-color: lighten(#454564, 10%);
+                }
+            }
+        }
+    }
+
+       &--sidebar {
+            width: 307px;
+            padding: 30px;
+            margin-bottom: 25px;
+    
+            h6 {
+                color: #bbbbd7;
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+    
+            nav {
+                ul {
+                    padding: 0;
+                    li {
+                        a {
+                            display: block;
+                            color: #786cd5;
+                            font-size: 16px;
+                            line-height: 31px;
+                            text-decoration: none;
+                            transition: 200ms color ease;
+    
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            hr {
+                background: #141428;
+                height: 4px;
+                margin: 25px 0;
+            }
+    
+            p {
+                color: #bbbbd7;
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 20px;
+            }
+    
+            .button {
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #786cd5;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+                transition: 200ms background-color ease;
+    
+                &:hover {
+                    background-color: darken(#786cd5, 10%);
+                }
+            }
+        }
+
+        &--list {
+            ul {
+                padding: 0;
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+    
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: #1b1b30;
+                        padding: 30px;
+                        text-decoration: none;
+                        transition: 100ms transform ease-in;
+    
+                        .inner {
+                            .title {
+                                display: block;
+                                font-size: 18px;
+                                font-weight: bold;
+                                color: #bbbbd7;
+                                margin-bottom: 20px;
+                            }
+    
+                            .description {
+                                color: #bbbbd7;
+                                font-size: 16px;
+                                line-height: 20px;
+                            }
+                        }
+    
+                        .category {
+                            position: relative;
+                            height: 36px;
+                            display: inline-flex;
+                            align-items: center;
+                            margin-left: 40px;
+                            padding: 0 18px;
+    
+    
+                            .payment-badge {
+                                background-color: #ff7e9c;
+                            }
+                            
+                            &::before {
+                                position: absolute;
+                                content: '';
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                border-radius: 36px;
+                                opacity: .05;
+    
+                            }
+                        }
+    
+                        &:hover {
+                            transform: scale(1.02);
+                        }
+                    }
+                }
+            }
+        }
+
+}
