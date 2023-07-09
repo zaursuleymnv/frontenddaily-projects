@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2f843758eb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Pricing Components</title>
+</head>
+<body>
+    <div class="container wrapper">
+        <div class="component--prices">
+            <input type="checkbox" id="price-switch" checked>
+            <div class="title">
+                <h3>Choose your plan</h3>
+                <label for="price-switch">
+                    <span>Monthly</span>
+                    <span>Yearly</span>
+                </label>
+            </div>
+            <div class="packages">
+                    <div class="package package-starter">
+                        <h6>Starter</h6>
+                        <div class="price-info">
+                            <div class="price">
+                                <span data-monthly-price="$8.99" data-yearly-price="$5.99"></span> / month
+                            </div>
+                            <div class="price-descryption">
+                                Billed <span data-monthly-text="monthly" data-yearly-text="yearly"></span>
+                            </div>
+                        </div>
+                        <p>
+                            Pretium fusce id velit ut tortor pretium. Sit
+                            amet consectetur adipiscing elit ut.
+                            Condimentum mattis pellentesque id nibh.
+                            Euismod elementum.
+                        </p>
+                        <a href="#" class="button">Get started</a>
+                    </div>
+                    <div class="package package-professional">
+                        <h6>Professional</h6>
+                        <div class="price-info">
+                            <div class="price">
+                                <span data-monthly-price="$21.99" data-yearly-price="$16.99"></span> / month
+                            </div>
+                            <div class="price-descryption">
+                                Billed <span data-monthly-text="monthly" data-yearly-text="yearly"></span>
+                            </div>
+                        </div>
+                        <p>
+                            Duis at consectetur lorem donec massa
+                            sapien faucibus. Ac placerat vestibulum lectus
+                            mauris.
+                        </p>
+                        <a href="#" class="button">Get started</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+@import 'partial/font';
+@import 'partial/icon-font';
+@import 'partial/mixin';
+@import 'partial/web';
+@import 'partial/variables';
+
+.wrapper {
+    @include center;
+    height: 100%;
+
+    .component {
+        &--prices {
+            max-width: 920px;
+            margin: 0 auto;
+            user-select: none;
+
+            .title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 55px;
+
+                h3 {
+                    font-size: 42px;
+                    font-weight: 900;
+                }
+
+                label {
+                    position: relative;
+                    width: 212px;
+                    height: 50px;
+                    background-color: #d4d9e0;
+                    border-radius: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    z-index: 1;
+
+                    &::before {
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        content: '';
+                        width: 100px;
+                        height: 40px;
+                        border-radius: 40px;
+                        background: #fff;
+                        box-shadow: 0 15px 13px -12px rgba(#8693a4, .74);
+                        z-index: -1;
+                        transition: 200ms right ease-in-out;
+                    }
+
+                    span {
+                        width: 100px;
+                        height: 40px;
+                        @include center;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: $secondary-color;
+                        transition: 200ms color ease-in-out;
+
+                        &:nth-child(2) {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+
+            .packages {
+                display: flex;
+                margin: 0 -20px;
+                .package {
+                    flex: 1;
+                    background-color: #fff;
+                    font-weight: bold;
+                    margin: 0 20px;
+                    padding: 45px;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 5px;
+                    transition: 300ms box-shadow ease-in-out;
+
+                    h6 {
+                        font-size: 28px;
+                        font-weight: bold;
+                        margin-bottom: 35px;
+                    }
+
+                    .price-info {
+                        margin-bottom: 30px;
+                        .price {
+                            font-size: 22px;
+                            margin-bottom: 10px;
+                            color: $primary-color;
+
+                            span::before {
+                                content: attr(data-yearly-price);
+                            }
+                        }
+
+                        .price-descryption {
+                            font-size: 18px;
+                            color: $secondary-color;
+
+                            span::before {
+                                content: attr(data-yearly-text);
+                            }
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 25px;
+                        color: $secondary-color;
+                        margin-bottom: 35px;
+                    }
+
+                    .button {
+                        @include center;
+                        width: 100%;
+                        height: 60px;
+                        border: 1px solid $primary-color;
+                        border-radius: 5px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-top: auto;
+                        color: $primary-color;
+                        text-decoration: none;
+                        transition: 200ms background-color ease-in-out, 200ms color ease-in-out;
+                    }
+
+                    &:hover {
+                        box-shadow: 0 19px 50px -20px rgba(#8693a4, .74);
+                        .button {
+                            background-color: $primary-color;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            #price-switch {
+                display: none;
+
+                &:checked {
+                    & + .title {
+                        label {
+                            &::before {
+                                right: 107px;
+                            }
+
+                            span {
+                                &:nth-child(2) {
+                                    color: $secondary-color;
+                                }
+                                &:first-child {
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+
+                        & + .packages {
+                            .package {
+                                .price-info {
+                                    .price {
+                                        span::before {
+                                            content: attr(data-monthly-price);
+                                        }
+                                    }
+                                    .price-descryption {
+                                        span::before {
+                                            content: attr(data-monthly-text);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
