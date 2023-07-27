@@ -1,0 +1,189 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(#000000, .5);
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    // transition: 200ms all;
+
+    .popup-close-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .popup-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        background: #f7f7fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 200ms background-color;
+
+        &:hover {
+            background-color: darken(#f7f7fc, 3%);
+        }
+        img {
+            height: 15px;
+        }
+    }
+
+    .popup-inner {
+        position: relative;
+        max-width: 808px;
+        padding: 55px 78px;
+        background-color: #fff;
+        border-radius: 15px;
+
+        h4 {
+            color: #242e4c;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin-bottom: 40px;
+
+            li {
+                flex: 1;
+                text-align: center;
+                margin-right: 15px;
+
+                a {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 82px;
+                    height: 82px;
+                    border-radius: 50%;
+                    border: 1px solid #ebebf2;
+                    transition: 200ms border-color ease-in;
+
+                    &:hover {
+                        border-color: #f775c1;
+                    }
+
+                    img {
+                        height: 35px;
+                    }
+                }
+            }
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #242e4c;
+            margin-bottom: 10px;
+        }
+
+        .actions {
+            position: relative;
+            display: flex;
+            align-items: center;
+            input {
+                width: 100%;
+                height: 57px;
+                color: #242e4c;
+                border: 1px solid #ebebf2;
+                border-radius: 5px;
+                padding: 0 15px;
+                font-size: 16px;
+            }
+
+            .btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 57px;
+                padding: 0 20px;
+                line-height: 57px;
+                font-size: 14px;
+                font-weight: bold;
+                color: #f775c1;
+            }
+        }
+    }
+}
+
+.popup-open-btn {
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #f775c1;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: 200ms background-color ease-in;
+
+    img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    span {
+        font-size: 17px;
+        transition: 200ms padding-left ease-in;
+    }
+
+    &:hover {
+        span {
+            color: #fff;
+            padding-left: 15px;
+        }
+        background-color: #f775c1;
+    }
+}
+
+.popup-toggle {
+    display: none;
+    &:checked + .popup {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.alert {
+  position: fixed;
+  width: 170px;
+  height: 30px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 25px;
+  border-radius: 50px !important;
+  transition: 300ms all;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    transform: translate(-50%, 20px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
